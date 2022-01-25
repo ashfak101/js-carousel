@@ -16,12 +16,19 @@ h1 {
   width: 400%;
   /* transform: translate(-30%); */
   transition: ease-in-out all 0.3s;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .sliders div {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
+  height: 40%;
 }
 .arrows {
   text-align: center;
