@@ -1,6 +1,7 @@
 console.log('hello from js')
 
 
+
 const sliders =document.querySelector(".sliders");
 const leftArrow = document.getElementById("arrow-l");
 const  rightArrow= document.getElementById("arrow-r");
@@ -12,7 +13,9 @@ const slider = Array.from(document.getElementsByClassName("slider"))
 // const handleArrow=()=>{
 //     console.log('clicked')
 // } 
+
  setInterval(()=> {
+    
     sliderIndex = (sliderIndex < 5 )? sliderIndex + 1: 0;
      sliders.style.transform = 'translate(' +( sliderIndex)* -15 +'%)';
   },3000);
@@ -26,4 +29,31 @@ const slider = Array.from(document.getElementsByClassName("slider"))
 rightArrow.addEventListener('click',()=>{
     sliderIndex = (sliderIndex < 5 )? sliderIndex + 1: 5;
     sliders.style.transform = 'translate(' +( sliderIndex)* -15 +'%)';
+});
+
+
+// /////-----------/////
+$(()=>{
+    let width =720;
+    let animateS =2000;
+    let currentSlide = 1;
+
+
+    let $slider = $('#slider-jq');
+    let $slideContainer = $('.slides',$slider);
+    let $slides = $('.slide',$slider)
+   
+
+    const startSlider=()=>{
+        setInterval(()=>{
+            $slideContainer.animate({'margin-left':'-='+width,animateS,function(){
+                if(++currentSlide === $slides.length){
+                    currentSlide=1;
+                    $slideContainer.css('margin-left', 0);
+                }
+            }})
+        },3000)
+    }
+
+    startSlider()
 })

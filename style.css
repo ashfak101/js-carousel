@@ -18,7 +18,7 @@ h1 {
   transition: ease-in-out all 0.3s;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -27,7 +27,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 40%;
 }
 .arrows {
@@ -43,3 +43,21 @@ h1 {
 #arrow-r :active {
   color: red;
 }
+#slider-jq {
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #333;
+  padding: 50px;
+}
+#slider-jq .slides {
+  display: flex;
+  flex-direction: row;
+  width: 6000px;
+  height: 400px;
+}
+#slider-jq .slides .slide {
+  width: 720px;
+  border: 1px solid #333;
+}
+
+/* --------------------------------------------- */
